@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
@@ -22,8 +22,8 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-}
-header  {
+} 
+header{
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,15 +34,15 @@ header  {
     justify-content: space-between;
     background: transparent;
     padding: 25px 15%;
-    transition-duration: .3s;
+    transition: .3s;
 }
 .logo{
-    color: var(--bg-color);
+    color: var(--text-color);
     font-size: 30px;
     font-weight: bold;
-    letter-spacing: 1px ;
+    letter-spacing: 1px;
 }
-.navbar{    
+.navbar{
     display: flex;
 }
 .navbar li{
@@ -80,7 +80,7 @@ header  {
     display: inline-block;
     line-height: 42px;
     background: var(--main-color );
-    color: var(--text-color);
+    color:#e0dcdc;
     border: none;
     border-radius: 30px;
     font-size: 14px;
@@ -90,6 +90,8 @@ header  {
  }
 .h-btn:hover{
     transform: translateY(-5px);
+    border: 2px solid var(--main-color);
+    cursor: pointer;
 }
 section{
     padding: 120px 15%;
@@ -97,16 +99,17 @@ section{
 .home{
     height: 100vh;
     width: 100%;
-    background: url(../Portofolio/Gaga.jpeg);
+    background: url(../Assets/white.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
-}
+}  
 .home-text h1{
-    margin: 20px 0px 20px;
+    margin: 20px 0px 20px; 
     font-size: var(--big-font);
 }
 span{
@@ -157,8 +160,9 @@ span{
  }
  .sticky .h-btn{
     background: var(--text-color);
-    color: #000;
+    color: #e0dcdc;
  }
+ 
  .about{
     background: var(--secound-bg-color);
     display: grid;
@@ -182,7 +186,7 @@ span{
     letter-spacing: 2px;
  }
  .about-text p{
-    color: var();
+    color: var(--secound-color);
     letter-spacing: 1px;
     line-height: 28px;
     max-width: 590px;
@@ -192,7 +196,7 @@ span{
  .btn{
     display: inline-block;
     background: var(--main-color);
-    color: var(--text-color);
+    color: #e0dcdc;
     border: 2px solid transparent;
     font-weight: 600;
     padding: 13px 30px;
@@ -222,7 +226,7 @@ span{
   }
   .service-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(370px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(370px, auto));
     grid-gap: 2rem;
     align-items: center;
     margin-bottom: 4.5rem;
@@ -234,29 +238,29 @@ span{
     cursor: pointer;
     transition: all .35s;
   }
-    .row i{
+ .row i{
         color: var(--main-color);
         margin-bottom: 20px;
         font-size: 2.7rem;
-    } 
-    .row h3{
+} 
+.row h3{
         color: var(--text-color);
         font-size: 22px;
         font-weight: 700;
         margin-bottom: 15px;
-    }
-    .row p{
+ }
+ .row p{
         color: var(--secound-color);
         line-height: 30px;
         font-size: var(--p-font);
-    }
-    .row:hover{
+}
+ .row:hover{
         transform: translateY(-8px);   
-    }
-    .portofolio{
+}
+ .portofolio{
         background: var(--secound-bg-color);
-    }
-    .portofolio-content{
+}
+ .portofolio-content{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(370px, auto));
         grid-gap: 2rem;
@@ -304,7 +308,7 @@ span{
         margin-bottom: 15px;
     }
     .contact-form p{
-        color: var(--secound-bg-color);
+        color: var(--secound-color);
         letter-spacing: 1px;
         line-height: 28px;
         font-size: var(--p-font);
@@ -319,8 +323,8 @@ span{
         padding: 20px;
         border: none;
         outline: none;
-        background: var(--secound-color);
-        color: var(--text-color);
+        background: var(--secound-bg-color);
+        color: #000;
         font-size: 1rem;
         margin-bottom: 0.5rem;
         border-radius: 10px;
@@ -328,11 +332,13 @@ span{
     .contact-form textarea{
         resize: none;
         height: 200px;
+        background: var(--secound-bg-color);
+        color: #000;
     }
     .contact-form form .send{
         display: inline-block;
         background: var(--main-color);
-        color: var(--text-color);
+        color: #e0dcdc;
         font-size: 18px;
         font-weight: 600;
         border-radius: 30px;
@@ -354,14 +360,25 @@ span{
         color: var(--secound-color);
         letter-spacing: 1px;
     }
+    .top i{
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #e0dcdc;
+        background: var(--main-color);
+    }
 
-    @media screen and (max-width: 1270px){
+    @media (max-width: 1270px){
         header{
             padding: 18px 4%;
             transition: .2s;
         }
         header .sticky{
             padding: 10px 4%;
+            transition: .2s;
+        }
+        section{
+            padding: 80px 4%;
             transition: .2s;
         }
         :root{
@@ -371,7 +388,7 @@ span{
             transition: .2s;
         }
     }
-    @media screen and  (max-width: 998px){
+    @media (max-width: 990px){
         .home{
             height: 85vh;
         }
@@ -380,7 +397,7 @@ span{
         }
         .navbar{
             position: absolute;
-            top: -700px;
+            top: 100%;
             left: 0;
             right:0;
             flex-direction: column;
